@@ -58,7 +58,7 @@
                 <ul class="plang dropdown-menu w-100">
                     <li><a class="plang dropdown-item CS">C#</a></li>
                     <li><a class="plang dropdown-item CPP">C++</a></li>
-                    <li><a class="plang dropdown-item VS">Visual Basic</a></li>
+                    <li><a class="plang dropdown-item VB">Visual Basic</a></li>
                     <li><a class="plang dropdown-item F">F#</a></li>
                     <li><a class="plang dropdown-item J">Java</a></li>
                     <li><a class="plang dropdown-item K">Kotlin</a></li>
@@ -132,6 +132,28 @@
                         <section class="docs-section" id="item-0-1-1">
                             <h3 class=""><b class="pe-2">0.1.1</b>Item</h3>
                             <p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+                            <nav>
+                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                    <button class="plang nav-link CS" id="nav-CS-tab" data-bs-toggle="tab" data-bs-target="#nav-CS" type="button" role="tab" aria-controls="nav-CS" aria-selected="true">C#</button>
+                                    <button class="plang nav-link CPP" id="nav-CPP-tab" data-bs-toggle="tab" data-bs-target="#nav-CPP" type="button" role="tab" aria-controls="nav-CPP" aria-selected="false">C++</button>
+                                    <button class="plang nav-link VB" id="nav-VB-tab" data-bs-toggle="tab" data-bs-target="#nav-VB" type="button" role="tab" aria-controls="nav-VB" aria-selected="false">Visual Basic</button>
+                                    <button class="plang nav-link F" id="nav-F-tab" data-bs-toggle="tab" data-bs-target="#nav-F" type="button" role="tab" aria-controls="nav-F" aria-selected="false">F#</button>
+                                    <button class="plang nav-link J" id="nav-J-tab" data-bs-toggle="tab" data-bs-target="#nav-J" type="button" role="tab" aria-controls="nav-J" aria-selected="false">Java</button>
+                                    <button class="plang nav-link K" id="nav-K-tab" data-bs-toggle="tab" data-bs-target="#nav-K" type="button" role="tab" aria-controls="nav-K" aria-selected="false">Kotlin</button>
+                                    <button class="plang nav-link JS" id="nav-JS-tab" data-bs-toggle="tab" data-bs-target="#nav-JS" type="button" role="tab" aria-controls="nav-JS" aria-selected="false">VJavaScript</button>
+                                    <button class="plang nav-link P" id="nav-P-tab" data-bs-toggle="tab" data-bs-target="#nav-P" type="button" role="tab" aria-controls="nav-P" aria-selected="false">Python</button>
+                                </div>
+                            </nav>
+                            <div class="tab-content border-start border-bottom border-end rounded-bottom p-2" id="nav-tabContent">
+                                <div class="tab-pane fade" id="nav-CS" role="tabpanel" aria-labelledby="nav-CS-tab">C# Content not available</div>
+                                <div class="tab-pane fade" id="nav-CPP" role="tabpanel" aria-labelledby="nav-CPP-tab">C++ Content not available</div>
+                                <div class="tab-pane fade" id="nav-VB" role="tabpanel" aria-labelledby="nav-VB-tab">Visual Basic Content not available</div>
+                                <div class="tab-pane fade" id="nav-F" role="tabpanel" aria-labelledby="nav-F-tab">F# Content not available</div>
+                                <div class="tab-pane fade" id="nav-J" role="tabpanel" aria-labelledby="nav-J-tab">Java Content not available</div>
+                                <div class="tab-pane fade" id="nav-K" role="tabpanel" aria-labelledby="nav-K-tab">Kotlin Content not available</div>
+                                <div class="tab-pane fade" id="nav-JS" role="tabpanel" aria-labelledby="nav-JS-tab">JavaScript Content not available</div>
+                                <div class="tab-pane fade" id="nav-P" role="tabpanel" aria-labelledby="nav-P-tab">Python Content not available</div>
+                            </div>
                         </section><!--//section-->
                     </section><!--//section-->
 
@@ -697,14 +719,6 @@
                     <div class="container text-center py-5">
                         <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
                         <small class="copyright">Designed with <span class="sr-only">love</span><i class="fas fa-heart" style="color: #fb866a;"></i> by <a class="theme-link" href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
-                        <ul class="social-list list-unstyled pt-4 mb-0">
-                            <li class="list-inline-item"><a href="#"><i class="fab fa-github fa-fw"></i></a></li>
-                            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
-                            <li class="list-inline-item"><a href="#"><i class="fab fa-slack fa-fw"></i></a></li>
-                            <li class="list-inline-item"><a href="#"><i class="fab fa-product-hunt fa-fw"></i></a></li>
-                            <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f fa-fw"></i></a></li>
-                            <li class="list-inline-item"><a href="#"><i class="fab fa-instagram fa-fw"></i></a></li>
-                        </ul><!--//social-list-->
                     </div>
                 </footer>
             </div>
@@ -728,7 +742,7 @@
 
         plangs.set('CS', { name: 'C#', completion: 100 });
         plangs.set('CPP', { name: 'C++', completion: 20 });
-        plangs.set('VS', { name: 'Visual Basic', completion: 0 });
+        plangs.set('VB', { name: 'Visual Basic', completion: 0 });
         plangs.set('F', { name: 'F#', completion: 0 });
         plangs.set('J', { name: 'Java', completion: 0 });
         plangs.set('K', { name: 'Kotlin', completion: 0 });
@@ -744,11 +758,13 @@
             for (const [key, value] of plangs) {
                 if (value.completion <= 0) {
                     $(".plang.dropdown-item." + key).addClass("disabled");
+                    $(".plang.nav-link." + key).addClass("disabled");
                 }else{
                     $(".plang.dropdown-item." + key).click(function () { UpdatePLang(key); });
                     $(".plang.nav-link." + key).click(function () { UpdatePLang(key); });
                     if (value.completion < 100) {
                         $(".plang.dropdown-item." + key).text(value.name + " (" + value.completion + "%)");
+                        $(".plang.nav-link." + key).text(value.name);
                     }
                 }
             }
@@ -758,10 +774,10 @@
         function UpdatePLang(plang) {
             value = plangs.get(plang);
             if (value.completion > 0) {
-                $("button.plang").text("Language: " + value.name);
+                $("button.plang.btn").text("Language: " + value.name);
                 $(".plang.dropdown-item").removeClass("active");
                 $(".plang.dropdown-item." + plang).addClass("active");
-                $(".plang.nav-link." + plang).click();
+                $(".plang.nav-link." + plang).tab('show');
             }
         }
     </script>
