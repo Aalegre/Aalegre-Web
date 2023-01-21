@@ -4,9 +4,17 @@ function Translate() {
     console.log("The language is: " + userLang);
     var url = window.location.href;
     var host = window.location.host;
-    var newUrl = url.replace(host, host.replace(".", "-") + ".translate.goog") + "?_x_tr_sl=en&_x_tr_tl=" + userLang.slice(0, 2);
+    var newUrl = url.replace(host, replaceAll(host, ".", "-") + ".translate.goog") + "?_x_tr_sl=en&_x_tr_tl=" + userLang.slice(0, 2);
     console.log(newUrl);
     if (userLang === "en")
         return;
     window.location.href = newUrl;
+}
+
+function escapeRegExp(string) {
+    return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
+}
+
+function replaceAll(str, find, replace) {
+    return str.replace(new RegExp(escapeRegExp(find), 'g'), replace);
 }
