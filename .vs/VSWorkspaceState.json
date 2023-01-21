@@ -3,8 +3,10 @@
     "",
     "\\assets",
     "\\assets\\js",
-    "\\Old"
+    "\\assets\\plugins",
+    "\\Old",
+    "\\Old\\js"
   ],
-  "SelectedNode": "\\assets\\js\\utils.js",
+  "SelectedNode": "\\glossary_old.html",
   "PreviewInSolutionExplorer": false
 }
