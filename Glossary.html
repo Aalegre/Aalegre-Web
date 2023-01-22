@@ -14,6 +14,7 @@
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css">
 
     <!-- FontAwesome JS-->
     <script defer src="assets/fontawesome/js/all.min.js"></script>
@@ -29,6 +30,88 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        pre, code {
+            font-family: Hack, monospace;
+        }
+        /* for block of numbers */
+        .hljs-ln-numbers {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            text-align: center;
+            color: #ccc;
+            border-right: 2px solid #CCC;
+            vertical-align: top;
+            padding-right: 5px;
+            /* your custom style here */
+        }
+
+        .docs-article {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        /* for block of code */
+        .hljs-ln-code {
+        }
+
+        table.hljs-ln {
+            width: 100%;
+        }
+
+        .hljs-ln > tbody > tr {
+            border-radius: 5px;
+        }
+
+            .hljs-ln > tbody > tr:first-child {
+                display: none;
+            }
+
+            .hljs-ln > tbody > tr:hover {
+                -webkit-box-shadow: inset 0px 0px 0px 2px #585858;
+                -moz-box-shadow: inset 0px 0px 0px 2px #585858;
+                box-shadow: inset 0px 0px 0px 2px #585858;
+            }
+
+        .gotoLine {
+            cursor: help;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        @keyframes shadowPulse {
+            0% {
+                -webkit-box-shadow: inset 0px 0px 0px 2px transparent;
+                -moz-box-shadow: inset 0px 0px 0px 2px transparent;
+                box-shadow: inset 0px 0px 0px 2px transparent;
+                background-color: transparent;
+            }
+
+            50% {
+                -webkit-box-shadow: inset 0px 0px 0px 2px #adadad;
+                -moz-box-shadow: inset 0px 0px 0px 2px #adadad;
+                box-shadow: inset 0px 0px 0px 2px #adadad;
+                background-color: #585858;
+            }
+
+            100% {
+                -webkit-box-shadow: inset 0px 0px 0px 2px transparent;
+                -moz-box-shadow: inset 0px 0px 0px 2px transparent;
+                box-shadow: inset 0px 0px 0px 2px transparent;
+                background-color: transparent;
+            }
+        }
+
+        .shadow-pulse {
+            animation-name: shadowPulse;
+            animation-duration: 0.3s;
+            animation-iteration-count: 3;
+            animation-timing-function: linear;
+        }
+    </style>
 
 </head>
 
@@ -91,73 +174,215 @@
                         <section class="docs-intro">
                             <p>You can change the language of the page from english to another language by using the Google Translate button in the top right corner.</p>
                             <p>This page contains examples in multiple programming languages, you can change them by using the dropdown in the menu, or these tabs that you will find through all the page:</p>
-                            <nav>
-                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                    <button class="plang nav-link CS" id="nav-CS-tab" data-bs-toggle="tab" data-bs-target="#nav-CS" type="button" role="tab" aria-controls="nav-CS" aria-selected="true">C#</button>
-                                    <button class="plang nav-link CPP" id="nav-CPP-tab" data-bs-toggle="tab" data-bs-target="#nav-CPP" type="button" role="tab" aria-controls="nav-CPP" aria-selected="false">C++</button>
-                                    <button class="plang nav-link VB" id="nav-VB-tab" data-bs-toggle="tab" data-bs-target="#nav-VB" type="button" role="tab" aria-controls="nav-VB" aria-selected="false">Visual Basic</button>
-                                    <button class="plang nav-link J" id="nav-J-tab" data-bs-toggle="tab" data-bs-target="#nav-J" type="button" role="tab" aria-controls="nav-J" aria-selected="false">Java</button>
-                                    <button class="plang nav-link K" id="nav-K-tab" data-bs-toggle="tab" data-bs-target="#nav-K" type="button" role="tab" aria-controls="nav-K" aria-selected="false">Kotlin</button>
-                                    <button class="plang nav-link JS" id="nav-JS-tab" data-bs-toggle="tab" data-bs-target="#nav-JS" type="button" role="tab" aria-controls="nav-JS" aria-selected="false">VJavaScript</button>
-                                    <button class="plang nav-link P" id="nav-P-tab" data-bs-toggle="tab" data-bs-target="#nav-P" type="button" role="tab" aria-controls="nav-P" aria-selected="false">Python</button>
-                                </div>
-                            </nav>
-                            <div class="tab-content border-start border-bottom border-end rounded-bottom p-2" id="nav-tabContent">
-                                <div class="tab-pane fade" id="nav-CS" role="tabpanel" aria-labelledby="nav-CS-tab">
-                                    <pre><code class="language-csharp hljs">
-                                        //C# content not available
-                                        int variable = 0;
-                                        void Function(){
-                                        }
+                            <div>
+                                <nav>
+                                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                        <button class="plang nav-link CS" id="nav-CS-tab-0" data-bs-toggle="tab" data-bs-target="#nav-CS-0" type="button" role="tab" aria-controls="nav-CS" aria-selected="false">C#</button>
+                                        <button class="plang nav-link CPP" id="nav-CPP-tab-0" data-bs-toggle="tab" data-bs-target="#nav-CPP-0" type="button" role="tab" aria-controls="nav-CPP" aria-selected="false">C++</button>
+                                        <button class="plang nav-link VB" id="nav-VB-tab-0" data-bs-toggle="tab" data-bs-target="#nav-VB-0" type="button" role="tab" aria-controls="nav-VB" aria-selected="false">Visual Basic</button>
+                                        <button class="plang nav-link J" id="nav-J-tab-0" data-bs-toggle="tab" data-bs-target="#nav-J-0" type="button" role="tab" aria-controls="nav-J" aria-selected="false">Java</button>
+                                        <button class="plang nav-link K" id="nav-K-tab-0" data-bs-toggle="tab" data-bs-target="#nav-K-0" type="button" role="tab" aria-controls="nav-K" aria-selected="false">Kotlin</button>
+                                        <button class="plang nav-link JS" id="nav-JS-tab-0" data-bs-toggle="tab" data-bs-target="#nav-JS-0" type="button" role="tab" aria-controls="nav-JS" aria-selected="false">VJavaScript</button>
+                                        <button class="plang nav-link P" id="nav-P-tab-0" data-bs-toggle="tab" data-bs-target="#nav-P-0" type="button" role="tab" aria-controls="nav-P" aria-selected="false">Python</button>
+                                    </div>
+                                </nav>
+                                <div class="tab-content border-start border-bottom border-end rounded-bottom p-2" id="nav-tabContent">
+                                    <div class="tab-pane fade plang CS" id="nav-CS-0" role="tabpanel" aria-labelledby="nav-CS-tab-0">
+                                        <pre><code class="language-csharp hljs">
+    //C# content not available
+    int variable = 0;
+    void Function(){
+    }
                                     </code></pre>
-                                </div>
-                                <div class="tab-pane fade" id="nav-CPP" role="tabpanel" aria-labelledby="nav-CPP-tab">
-                                    <pre><code class="language-cpp hljs">
-                                        //C++ content not available
-                                        int variable = 0;
-                                        void Function(){
-                                        }
+                                    </div>
+                                    <div class="tab-pane fade plang CPP" id="nav-CPP-0" role="tabpanel" aria-labelledby="nav-CPP-tab-0">
+                                        <pre><code class="language-cpp hljs">
+    //C++ content not available
+    int variable = 0;
+    void Function(){
+    }
                                     </code></pre>
-                                </div>
-                                <div class="tab-pane fade" id="nav-VB" role="tabpanel" aria-labelledby="nav-VB-tab">
-                                    <pre><code class="language-vbnet hljs">
-                                        ''Visual Basic content not available
-                                        Dim variable as Integer = 0
-                                        Private Sub Function()
-                                        End Sub
+                                    </div>
+                                    <div class="tab-pane fade plang VB" id="nav-VB-0" role="tabpanel" aria-labelledby="nav-VB-tab-0">
+                                        <pre><code class="language-vbnet hljs">
+    ''Visual Basic content not available
+    Dim variable as Integer = 0
+    Private Sub Function()
+    End Sub
                                     </code></pre>
-                                </div>
-                                <div class="tab-pane fade" id="nav-J" role="tabpanel" aria-labelledby="nav-J-tab">
-                                    <pre><code class="language-java hljs">
-                                        //Java content not available
-                                        int variable = 0;
-                                        void Function(){
-                                        }
+                                    </div>
+                                    <div class="tab-pane fade plang J" id="nav-J-0" role="tabpanel" aria-labelledby="nav-J-tab-0">
+                                        <pre><code class="language-java hljs">
+    //Java content not available
+    int variable = 0;
+    void Function(){
+    }
                                     </code></pre>
-                                </div>
-                                <div class="tab-pane fade" id="nav-K" role="tabpanel" aria-labelledby="nav-K-tab">
-                                    <pre><code class="language-kotlin hljs">
-                                        //Kotlin content not available
-                                        val variable: Int = 0
-                                        fun Function() {
-                                        }
+                                    </div>
+                                    <div class="tab-pane fade plang K" id="nav-K-0" role="tabpanel" aria-labelledby="nav-K-tab-0">
+                                        <pre><code class="language-kotlin hljs">
+    //Kotlin content not available
+    val variable: Int = 0
+    fun Function() {
+    }
                                     </code></pre>
-                                </div>
-                                <div class="tab-pane fade" id="nav-JS" role="tabpanel" aria-labelledby="nav-JS-tab">
-                                    <pre><code class="language-javascript hljs">
-                                        //JavaScript content not available
-                                        var variable = 0;
-                                        function Function(){
-                                        }
+                                    </div>
+                                    <div class="tab-pane fade plang JS" id="nav-JS-0" role="tabpanel" aria-labelledby="nav-JS-tab-0">
+                                        <pre><code class="language-javascript hljs">
+    //JavaScript content not available
+    var variable = 0;
+    function Function(){
+    }
                                     </code></pre>
-                                </div>
-                                <div class="tab-pane fade" id="nav-P" role="tabpanel" aria-labelledby="nav-P-tab">
-                                    <pre><code class="language-python hljs">
-                                        #Python content not available
-                                        variable = 0
-                                        def my_function():
-                                        ()
+                                    </div>
+                                    <div class="tab-pane fade plang P" id="nav-P-0" role="tabpanel" aria-labelledby="nav-P-tab-0">
+                                        <pre><code class="language-python hljs">
+    #Python content not available
+    variable = 0
+    def my_function():
+    ()
                                     </code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </section><!--//docs-intro-->
+                    </header>
+                </article><!--//docs-article-->
+                <article class="docs-article">
+                    <header class="docs-header">
+                        <h1 class="docs-heading head">Syntax</h1>
+                        <section class="docs-intro">
+                            <p>Each programming language has its way of being written, it's own syntax. In this section you will be able to start to grasp it with a simple "Hello world" program.</p>
+                            <div>
+                                <nav>
+                                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                        <button class="plang nav-link CS" id="nav-CS-tab-1" data-bs-toggle="tab" data-bs-target="#nav-CS-1" type="button" role="tab" aria-controls="nav-CS" aria-selected="false">C#</button>
+                                        <button class="plang nav-link CPP" id="nav-CPP-tab-1" data-bs-toggle="tab" data-bs-target="#nav-CPP-1" type="button" role="tab" aria-controls="nav-CPP" aria-selected="false">C++</button>
+                                        <button class="plang nav-link VB" id="nav-VB-tab-1" data-bs-toggle="tab" data-bs-target="#nav-VB-1" type="button" role="tab" aria-controls="nav-VB" aria-selected="false">Visual Basic</button>
+                                        <button class="plang nav-link J" id="nav-J-tab-1" data-bs-toggle="tab" data-bs-target="#nav-J-1" type="button" role="tab" aria-controls="nav-J" aria-selected="false">Java</button>
+                                        <button class="plang nav-link K" id="nav-K-tab-1" data-bs-toggle="tab" data-bs-target="#nav-K-1" type="button" role="tab" aria-controls="nav-K" aria-selected="false">Kotlin</button>
+                                        <button class="plang nav-link JS" id="nav-JS-tab-1" data-bs-toggle="tab" data-bs-target="#nav-JS-1" type="button" role="tab" aria-controls="nav-JS" aria-selected="false">VJavaScript</button>
+                                        <button class="plang nav-link P" id="nav-P-tab-1" data-bs-toggle="tab" data-bs-target="#nav-P-1" type="button" role="tab" aria-controls="nav-P" aria-selected="false">Python</button>
+                                    </div>
+                                </nav>
+                                <div class="tab-content border-start border-bottom border-end rounded-bottom p-2" id="nav-tabContent">
+                                    <div class="tab-pane fade plang CS" id="nav-CS-1" role="tabpanel" aria-labelledby="nav-CS-tab-1">
+                                        <div>
+                                            <pre><code class="language-csharp hljs">
+    //HelloWorld.cs
+
+    using System;
+    namespace HelloWorld
+    {
+        class Program
+        {
+            static void Main(string[] args)
+            {
+                Console.WriteLine("Hello World!");    
+            }
+        }
+    }
+                                    </code></pre>
+                                            <p><a class="gotoLine line-1">Line 1:</a>A c# comment ignored by the programm. Can be useful to leave notes on the code only for the programmers. With <code>// Line comment</code> you can comment an entire line, with <code>/* Block comment */</code> you can comment a block. This specific comment it's indicating the name of the c# file.'</p>
+                                            <p><a class="gotoLine line-2">Line 2:</a>A blank line. C# ignores white space. However, multiple lines makes the code more readable.</p>
+                                            <p><a class="gotoLine line-3">Line 3:</a>Imports the System namespace, in order for us to use it's contents easily. In this case, the System namespace contains the Console class that we need in order to write messages to the console. All imports are statements, that's why on C# we end them with <code>;</code> <sup>1</sup> <sup>3</sup></p>
+                                            <p><a class="gotoLine line-4">Line 4:</a>Here we are defining our own custom namespace. Namespaces are used to organize code, can contain classes and other namespaces. It's like a "folder" but for code. <sup>2</sup> <sup>3</sup></p>
+                                            <p><a class="gotoLine line-5">Line 5:</a>The curly braces <code>{}</code> marks the beginning and the end of a block of code, or scope.</p>
+                                            <p><a class="gotoLine line-6">Line 6:</a>A class is a container for data and methods, which brings functionality to your program. Every line of code that runs in C# must be inside a class. In our example, we named the class Program. <sup>2</sup> <sup>3</sup></p>
+                                            <p><a class="gotoLine line-5">Line 5:</a></p>
+                                            <p><a class="gotoLine line-5">Line 5:</a></p>
+                                            <p><a class="gotoLine line-5">Line 5:</a></p>
+                                            <p><a class="gotoLine line-5">Line 5:</a></p>
+                                            <div class="callout-block callout-block-info">
+
+                                                <div class="content">
+                                                    <h4 class="callout-title">
+                                                        <span class="callout-icon-holder me-1">
+                                                            <i class="fas fa-info-circle"></i>
+                                                        </span><!--//icon-holder-->
+                                                        Note 1
+                                                    </h4>
+                                                    <p>All execution statements are writed followed by <code>;</code> </p>
+                                                </div><!--//content-->
+                                            </div><!--//callout-block-->
+                                            <div class="callout-block callout-block-info">
+
+                                                <div class="content">
+                                                    <h4 class="callout-title">
+                                                        <span class="callout-icon-holder me-1">
+                                                            <i class="fas fa-info-circle"></i>
+                                                        </span><!--//icon-holder-->
+                                                        Note 2
+                                                    </h4>
+                                                    <p>All definitions are writed <b>without</b> <code>;</code> and usually followed by a block of code, or scope <code>{}</code> </p>
+                                                </div><!--//content-->
+                                            </div><!--//callout-block-->
+                                            <div class="callout-block callout-block-info">
+
+                                                <div class="content">
+                                                    <h4 class="callout-title">
+                                                        <span class="callout-icon-holder me-1">
+                                                            <i class="fas fa-info-circle"></i>
+                                                        </span><!--//icon-holder-->
+                                                        Note 3
+                                                    </h4>
+                                                    <p>Don't worry if you don't understand how <code>using System</code>, <code>namespace</code> and <code>class</code> works. Just think of it as something that (almost) always appears in your program, and that you will learn more about them later.</p>
+                                                </div><!--//content-->
+                                            </div><!--//callout-block-->
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade plang CPP" id="nav-CPP-1" role="tabpanel" aria-labelledby="nav-CPP-tab-1">
+                                        <pre><code class="language-cpp hljs">
+    //HelloWorld.cpp
+    #include <iostream>
+    using namespace std;
+
+    int main() {
+      cout << "Hello World!";
+      return 0;
+    }
+                                    </code></pre>
+                                    </div>
+                                    <div class="tab-pane fade plang VB" id="nav-VB-1" role="tabpanel" aria-labelledby="nav-VB-tab-1">
+                                        <pre><code class="language-vbnet hljs">
+    ''Visual Basic content not available
+    Dim variable as Integer = 0
+    Private Sub Function()
+    End Sub
+                                    </code></pre>
+                                    </div>
+                                    <div class="tab-pane fade plang J" id="nav-J-1" role="tabpanel" aria-labelledby="nav-J-tab-1">
+                                        <pre><code class="language-java hljs">
+    //Java content not available
+    int variable = 0;
+    void Function(){
+    }
+                                    </code></pre>
+                                    </div>
+                                    <div class="tab-pane fade plang K" id="nav-K-1" role="tabpanel" aria-labelledby="nav-K-tab-1">
+                                        <pre><code class="language-kotlin hljs">
+    //Kotlin content not available
+    val variable: Int = 0
+    fun Function() {
+    }
+                                    </code></pre>
+                                    </div>
+                                    <div class="tab-pane fade plang JS" id="nav-JS-1" role="tabpanel" aria-labelledby="nav-JS-tab-1">
+                                        <pre><code class="language-javascript hljs">
+    //JavaScript content not available
+    var variable = 0;
+    function Function(){
+    }
+                                    </code></pre>
+                                    </div>
+                                    <div class="tab-pane fade plang P" id="nav-P-1" role="tabpanel" aria-labelledby="nav-P-tab-1">
+                                        <pre><code class="language-python hljs">
+    #Python content not available
+    variable = 0
+    def my_function():
+    ()
+                                    </code></pre>
+                                    </div>
                                 </div>
                             </div>
                         </section><!--//docs-intro-->
@@ -193,12 +418,18 @@
         </div>
     </div><!--//docs-wrapper-->
     <!-- Javascript -->
-    <script src="assets/plugins/popper.min.js"></script>
-    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-
-
-    <!-- Page Specific JS -->
     <script>
+
+        const plangs = new Map();
+
+        plangs.set('CS', { name: 'C#', completion: 100, sections: 0 });
+        plangs.set('CPP', { name: 'C++', completion: 20, sections: 0 });
+        plangs.set('VB', { name: 'Visual Basic', completion: 0, sections: 0 });
+        plangs.set('J', { name: 'Java', completion: 0, sections: 0 });
+        plangs.set('K', { name: 'Kotlin', completion: 0, sections: 0 });
+        plangs.set('JS', { name: 'JavaScript', completion: 10, sections: 0 });
+        plangs.set('P', { name: 'Python', completion: 0, sections: 0 });
+
         LoadIndex();
         function LoadIndex() {
             var nav = $(".docs-nav > ul");
@@ -246,10 +477,50 @@
                 }
             });
         }
+
+        SetupPLang();
+        function SetupPLang() {
+            $(".plang.dropdown-item").removeClass("active");
+            for (const [key, value] of plangs) {
+                if (value.completion <= -1) {
+                    $(".plang.dropdown-item." + key).addClass("disabled");
+                    $(".plang.nav-link." + key + ":not(:first)").addClass("disabled");
+                } else {
+                    $(".plang.dropdown-item." + key).click(function () { UpdatePLang(key); });
+                    //$(".plang.nav-link." + key).click(function () { UpdatePLang(key); });
+                    $(".plang.nav-link." + key).each(function () {
+                        $(this).click(function () { UpdatePLang(key, this); });
+                    });
+                    if (value.completion < 100) {
+                        $(".plang.dropdown-item." + key).text(value.name + " (" + value.completion + "%)");
+                        $(".plang.nav-link." + key).text(value.name);
+                    }
+                }
+                //$("button.plang.nav-link." + key).each(function () {
+                //    var idbutton = "nav-" + key + "-tab-" + value.sections;
+                //    var idcontent = "nav-" + key + "-" + value.sections;
+                //    var content = $(this).parents("nav").parent().find("div.tab-pane.plang." + key);
+                //    $(this).attr("id", idbutton);
+                //    $(this).attr("data-bs-target", idcontent);
+                //    $(this).attr("aria-controls", idcontent);
+                //    $(content).attr("id", idcontent);
+                //    $(content).attr("aria-labelledby", idbutton);
+                //    value.sections++;
+                //});
+            }
+        }
     </script>
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+
+    <!-- Page Specific JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/fsharp.min.js"></script>
-    <script>hljs.highlightAll();</script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+    <script>
+        hljs.highlightAll();
+        hljs.initLineNumbersOnLoad({startFrom:0});
+    </script>
     <script src="assets/plugins/smoothscroll.min.js"></script>
     <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>
     <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script>
@@ -257,46 +528,57 @@
     <script src="assets/js/utils.js"></script>
 
     <script>
-        const plangs = new Map();
-
-        plangs.set('CS', { name: 'C#', completion: 100 });
-        plangs.set('CPP', { name: 'C++', completion: 20 });
-        plangs.set('VB', { name: 'Visual Basic', completion: 0 });
-        plangs.set('J', { name: 'Java', completion: 0 });
-        plangs.set('K', { name: 'Kotlin', completion: 0 });
-        plangs.set('JS', { name: 'JavaScript', completion: 10 });
-        plangs.set('P', { name: 'Python', completion: 0 });
 
         $(document).ready(function () {
-            SetupPLang();
+            UpdatePLang(plangs.keys().next().value);
+            setTimeout(function () {
+                $("a.gotoLine").each(function () {
+                    const line = findLine(this);
+                    $(this).click(function () {
+                        scrollOffset(line, -100);
+                        $(line).addClass('shadow-pulse');
+                        $(line).on('animationend', function () {
+                            $(line).removeClass('shadow-pulse');
+                            // do something else...
+                        });
+                    });
+                    //$(line).find(".hljs-ln-numbers").addClass("gotoLine").click(function () { scrollOffset(this, -75); });
+                });
+            }, 500);
         });
 
-        function SetupPLang() {
-            $(".plang.dropdown-item").removeClass("active");
-            for (const [key, value] of plangs) {
-                if (value.completion <= 0) {
-                    $(".plang.dropdown-item." + key).addClass("disabled");
-                    $(".plang.nav-link." + key + ":not(:first)").addClass("disabled");
-                } else {
-                    $(".plang.dropdown-item." + key).click(function () { UpdatePLang(key); });
-                    $(".plang.nav-link." + key).click(function () { UpdatePLang(key); });
-                    if (value.completion < 100) {
-                        $(".plang.dropdown-item." + key).text(value.name + " (" + value.completion + "%)");
-                        $(".plang.nav-link." + key).text(value.name);
-                    }
-                }
-            }
-            UpdatePLang(plangs.keys().next().value);
-        }
 
-        function UpdatePLang(plang) {
+        function UpdatePLang(plang, element) {
+            var scroll = document.documentElement.scrollTop || document.body.scrollTop;
             value = plangs.get(plang);
-            if (value.completion > 0) {
+            if (value.completion > -1) {
                 $("button.plang.btn").text("Language: " + value.name);
                 $(".plang.dropdown-item").removeClass("active");
                 $(".plang.dropdown-item." + plang).addClass("active");
                 $(".plang.nav-link." + plang).tab('show');
             }
+            if (element != undefined) {
+                //const y = element.getBoundingClientRect().top + window.pageYOffset - 100;
+                //window.scrollTo({ top: y, behavior: 'smooth' });
+
+                //element.scrollIntoView();
+
+                window.scrollTo({ top: scroll, behavior: 'smooth' });
+            }
+        }
+
+
+        function findLine(element) {
+            var line = 0;
+            var classList = $(element).attr('class').split(/\s+/);
+            $.each(classList, function (index, item) {
+                if (item.startsWith("line-")) {
+                    line = parseInt(item.replace("line-", ""));
+                }
+            });
+            var closest = $(element).closest("div");
+            var trs = $(element).closest("div").find("tr");
+            return $(element).closest("div").find("tr")[line];
         }
 
     </script>
