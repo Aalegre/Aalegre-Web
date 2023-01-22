@@ -12729,7 +12729,7 @@ a.text-link:hover {
 
 .docs-sidebar {
     display: none;
-    width: 300px;
+    width: 400px;
     position: fixed;
     z-index: 10;
     top: 69px;
@@ -12742,6 +12742,11 @@ a.text-link:hover {
     transition: transform 0.35s ease-in-out;
     transition: transform 0.35s ease-in-out, -webkit-transform 0.35s ease-in-out;
     box-shadow: 1px 0 5px 0 rgba(0,0,0,0.1)
+}
+@media (max-width: 400px) {
+    .docs-sidebar {
+        width: 300px;
+    }
 }
 
 .docs-sidebar::-webkit-scrollbar {
@@ -12767,8 +12772,8 @@ a.text-link:hover {
 }
 
 .docs-sidebar.sidebar-hidden {
-    -webkit-transform: translateX(-300px);
-    transform: translateX(-300px);
+    -webkit-transform: translateX(-400px);
+    transform: translateX(-400px);
     display: block
 }
 

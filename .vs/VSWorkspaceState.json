@@ -2,11 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\assets",
-    "\\assets\\js",
-    "\\assets\\plugins",
-    "\\Old",
+    "\\assets\\css",
     "\\Old\\js"
   ],
-  "SelectedNode": "\\glossary_old.html",
+  "SelectedNode": "\\assets\\css\\theme.css",
   "PreviewInSolutionExplorer": false
 }
