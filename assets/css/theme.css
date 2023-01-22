@@ -213,6 +213,9 @@ b,strong {
 small,.small {
     font-size: .875em
 }
+mini, .mini {
+    font-size: .6em
+}
 
 mark,.mark {
     padding: .1875em;

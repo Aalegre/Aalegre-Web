@@ -388,11 +388,320 @@
                         </section><!--//docs-intro-->
                     </header>
                     <section class="docs-section">
-                        <h2 class="section-heading head">Item</h2>
-                        <p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+                        <h2 class="section-heading head">Naming conventions</h2>
+                        <p>In computer programming, a <a href="https://en.wikipedia.org/wiki/Naming_convention_(programming)" target="_blank">naming convention<sup><span class="material-icons-round">link</span></sup></a> is a set of rules for choosing the character sequence to be used for identifiers which denote variables, types, functions, and other entities in source code and documentation.</p>
+                        <p>There are multiple and diverse naming conventions, most of them are only recommendations by the language author's. But there are also limitations in some languages for specific language conventions</p>
+                        <p>Here are multiple two-word combination naming conventions for custom names (variables, classes, functions, napespaces...):</p>
+
+                        <div class="table-responsive my-4">
+                            <table class="table table-bordered table-dark">
+                                <thead>
+                                    <tr class="text-center">
+                                        <th scope="col" rowspan="2" style="width:25px">Sample</th>
+                                        <th scope="col" rowspan="2">Names</th>
+                                        <th scope="col" colspan="7">Languages</th>
+                                    </tr>
+                                    <tr class="text-center">
+                                        <th scope="col" class="mini" style="width:75px">C#</th>
+                                        <th scope="col" class="mini" style="width:75px">C++</th>
+                                        <th scope="col" class="mini" style="width:75px">VisualBasic</th>
+                                        <th scope="col" class="mini" style="width:75px">Java</th>
+                                        <th scope="col" class="mini" style="width:75px">Kotlin</th>
+                                        <th scope="col" class="mini" style="width:75px">JavaScript</th>
+                                        <th scope="col" class="mini" style="width:75px">Python</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th class="text-right font-monospace" scope="row">twowords</th>
+                                        <td>lowercase<br /><mini>flatcase</mini></td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-success">check_circle</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-success">check_circle</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-success">check_circle</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-success">check_circle</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-warning" title="Allowed in some cases">help</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-success">check_circle</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-success">check_circle</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-right font-monospace" scope="row">TWOWORDS</th>
+                                        <td>UPPERCASE<br /><mini>&nbsp;</mini></td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-success">check_circle</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-success">check_circle</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-success">check_circle</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-warning" title="Allowed in some cases">help</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-warning" title="Allowed in some cases">help</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-success">check_circle</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-success">check_circle</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-right font-monospace" scope="row">twoWords</th>
+                                        <td>lowerCamelCase<br /><mini>dromedaryCase</mini></td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-success">check_circle</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-success">check_circle</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-success">check_circle</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-success">check_circle</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-warning" title="Allowed in some cases">help</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-success">check_circle</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-success">check_circle</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-right font-monospace" scope="row">TwoWords</th>
+                                        <td>UpperCamelCase<br /><mini>PascalCase, StudlyCase</mini></td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-success">check_circle</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-success">check_circle</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-success">check_circle</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-warning" title="Allowed in some cases">help</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-warning" title="Allowed in some cases">help</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-success">check_circle</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-success">check_circle</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-right font-monospace" scope="row">two_words</th>
+                                        <td>snake_case<br /><mini>pothole_case</mini></td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-success">check_circle</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-success">check_circle</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-success">check_circle</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-success">check_circle</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-warning" title="Allowed in some cases">help</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-success">check_circle</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-success">check_circle</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-right font-monospace" scope="row">TWO_WORDS</th>
+                                        <td>CONSTANT_CASE<br /><mini>MACRO_CASE, SCREAMING_SNAKE_CASE</mini></td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-success">check_circle</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-success">check_circle</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-success">check_circle</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-warning" title="Allowed in some cases">help</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-warning" title="Allowed in some cases">help</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-success">check_circle</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-success">check_circle</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-right font-monospace" scope="row">two_Words</th>
+                                        <td>camel_Snake_Case<br /><mini>&nbsp;</mini></td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-success">check_circle</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-success">check_circle</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-success">check_circle</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-success">check_circle</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-warning" title="Allowed in some cases">help</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-success">check_circle</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-success">check_circle</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-right font-monospace" scope="row">two_Words</th>
+                                        <td>Pascal_Snake_Case<br /><mini>Title_Case</mini></td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-success">check_circle</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-success">check_circle</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-success">check_circle</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-warning" title="Allowed in some cases">help</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-warning" title="Allowed in some cases">help</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-success">check_circle</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-success">check_circle</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-right font-monospace" scope="row">two-words</th>
+                                        <td>kebab-case<br /><mini>dash-case, lisp-case, spinal-case</mini></td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-danger" title="Not allowed">cancel</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-danger" title="Not allowed">cancel</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-danger" title="Not allowed">cancel</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-danger" title="Not allowed">cancel</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-danger" title="Not allowed">cancel</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-danger" title="Not allowed">cancel</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-danger" title="Not allowed">cancel</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-right font-monospace" scope="row">TWO-WORDS</th>
+                                        <td>SCREAMING-KEBAB-CASE<br /><mini>TRAIN-CASE, COBOL-CASE</mini></td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-danger" title="Not allowed">cancel</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-danger" title="Not allowed">cancel</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-danger" title="Not allowed">cancel</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-danger" title="Not allowed">cancel</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-danger" title="Not allowed">cancel</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-danger" title="Not allowed">cancel</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-danger" title="Not allowed">cancel</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-right font-monospace" scope="row">Two-Words</th>
+                                        <td>Train-Case<br /><mini>HTTP-Header-Case</mini></td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-danger" title="Not allowed">cancel</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-danger" title="Not allowed">cancel</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-danger" title="Not allowed">cancel</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-danger" title="Not allowed">cancel</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-danger" title="Not allowed">cancel</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-danger" title="Not allowed">cancel</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="material-icons-round text-danger" title="Not allowed">cancel</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <small>
+                                <span class="material-icons-round text-success">check_circle</span>: Available for all names<br />
+                                <span class="material-icons-round text-warning" title="Allowed in some cases">help</span>: Available only for certain names<br />
+                                <span class="material-icons-round text-danger" title="Not allowed">cancel</span>: Not allowed in any names
+                            </small>
+                        </div>
                         <section class="docs-section">
-                            <h3 class="head">Item</h3>
-                            <p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+                            <h3 class="head">Official recommendations</h3>
+                            <p>Some languages have a certain mode of being written, as indicated by the official documentation:</p>
+                        </section><!--//section-->
+                        <section class="docs-section">
+                            <h3 class="head">My recommendations</h3>
+                            <p>Here are my naming convention recommendations that ignores some of the official suggestions in order to be more understandable for the programmer:</p>
                         </section><!--//section-->
                     </section><!--//section-->
 
@@ -519,7 +828,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
     <script>
         hljs.highlightAll();
-        hljs.initLineNumbersOnLoad({startFrom:0});
+        hljs.initLineNumbersOnLoad({ startFrom: 0 });
     </script>
     <script src="assets/plugins/smoothscroll.min.js"></script>
     <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>
