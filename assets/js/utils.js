@@ -4,10 +4,10 @@ function Translate() {
     console.log("The language is: " + userLang);
     var url = window.location.href;
     var host = window.location.host;
-    var newUrl = url.replace(host, replaceAll(host, ".", "-") + ".translate.goog") + "?_x_tr_sl=en&_x_tr_tl=" + userLang.slice(0, 2);
-    console.log(newUrl);
     if (userLang === "en")
         userLang = "es";
+    var newUrl = url.replace(host, replaceAll(host, ".", "-") + ".translate.goog") + "?_x_tr_sl=en&_x_tr_tl=" + userLang.slice(0, 2);
+    console.log(newUrl);
     window.location.href = newUrl;
 }
 
