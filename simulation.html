@@ -44,7 +44,7 @@
                       </td>
                       <td>
                           <div class="input-group">
-                              <label for="Desktop_Practices" class="input-group-text">10%</label>
+                              <label for="Desktop_Practices" class="input-group-text">5%</label>
                               <input type="number" min="0" max="100" class="form-control" id="Desktop_Practices" value="70" onchange="Calculate_Score();">
                           </div>
                       </td>
@@ -64,7 +64,7 @@
                       </td>
                       <td rowspan="2">
                           <div class="input-group">
-                              <label for="Teacher" class="input-group-text">20%</label>
+                              <label for="Teacher" class="input-group-text">30%</label>
                               <input type="number" min="0" max="11" class="form-control" id="Teacher" value="5" onchange="Calculate_Score();">
                           </div>
                       </td>
@@ -87,7 +87,7 @@
                       </td>
                       <td>
                           <div class="input-group">
-                              <label for="Mobile_Practices" class="input-group-text">10%</label>
+                              <label for="Mobile_Practices" class="input-group-text">5%</label>
                               <input type="number" min="0" max="100" class="form-control" id="Mobile_Practices" value="70" onchange="Calculate_Score();">
                           </div>
                       </td>
@@ -110,13 +110,13 @@
           function Calculate_Score() {
               var Desktop_Performance = Clamp(Remap(parseFloat($("#Desktop_Performance").val()), 50, 90, 0, 10), 0, 12.5) * 0.05;
               var Desktop_Accesibility = Clamp(Remap(parseFloat($("#Desktop_Accesibility").val()), 50, 90, 0, 10), 0, 12.5) * 0.15;
-              var Desktop_Practices = Clamp(Remap(parseFloat($("#Desktop_Practices").val()), 50, 90, 0, 10), 0, 12.5) * 0.1;
+              var Desktop_Practices = Clamp(Remap(parseFloat($("#Desktop_Practices").val()), 50, 90, 0, 10), 0, 12.5) * 0.05;
               var Desktop_SEO = Clamp(Remap(parseFloat($("#Desktop_SEO").val()), 50, 90, 0, 10), 0, 12.5) * 0.1;
               var Mobile_Performance = Clamp(Remap(parseFloat($("#Mobile_Performance").val()), 50, 90, 0, 10), 0, 12.5) * 0.05;
               var Mobile_Accesibility = Clamp(Remap(parseFloat($("#Mobile_Accesibility").val()), 50, 90, 0, 10), 0, 12.5) * 0.15;
-              var Mobile_Practices = Clamp(Remap(parseFloat($("#Mobile_Practices").val()), 50, 90, 0, 10), 0, 12.5) * 0.1;
+              var Mobile_Practices = Clamp(Remap(parseFloat($("#Mobile_Practices").val()), 50, 90, 0, 10), 0, 12.5) * 0.05;
               var Mobile_SEO = Clamp(Remap(parseFloat($("#Mobile_SEO").val()), 50, 90, 0, 10), 0, 12.5) * 0.1;
-              var Teacher = parseFloat($("#Teacher").val()) * 0.2;
+              var Teacher = parseFloat($("#Teacher").val()) * 0.3;
               var total = Desktop_Performance + Desktop_Accesibility + Desktop_Practices + Desktop_SEO + Mobile_Performance + Mobile_Accesibility + Mobile_Practices + Mobile_SEO + Teacher;
 
               if ($("#PWA").is(":checked")) {
