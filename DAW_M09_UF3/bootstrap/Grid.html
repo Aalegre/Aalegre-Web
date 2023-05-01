@@ -12,26 +12,76 @@
     </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Aalegre - Resources - DAW M09 UF3 - Bootstrap - Tables</title>
+    <title>Aalegre - Resources - DAW M09 UF3 - Bootstrap - Grids</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 </head>
-  <body>
-    <main class="container-sm">
-        <div class="card mx-auto mt-5" style="max-width: 35em">
-          <div class="card-header">
-            <h1 class="card-title">Aalegre's resources</h1>
-            <h2 class="card-subtitle my-2 text-muted">Under construction</h2>
-          </div>
-          <div class="card-body">
-              <div class="list-group">
-                  <a href="https://aalegre.github.io/Aalegre-Web/index.html" class="list-group-item list-group-item-action">
-                      <i class="bi bi-house-fill pe-4 me-4 border-end"></i>Return
-                  </a>
-              </div>
-          </div>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary float-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Bootstrap - Grid</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a id="container-fluid" href="#container-fluid" class="nav-link active">.container-fluid</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="container" href="#container" class="nav-link">.container</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="container-sm" href="#container-sm" class="nav-link">.container-sm</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="container-md" href="#container-md" class="nav-link">.container-md</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="container-lg" href="#container-lg" class="nav-link">.container-lg</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="container-xl" href="#container-xl" class="nav-link">.container-xl</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="container-xxl" href="#container-xxl" class="nav-link">.container-xxl</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="container-fluid">
+        <div class="card mx-auto mt-5">
+            <div class="card-header">
+                <h1 class="card-title">Aalegre's resources</h1>
+                <h2 class="card-subtitle my-2 text-muted">Under construction</h2>
+            </div>
+            <div class="card-body">
+                <div class="list-group">
+                    <a href="https://aalegre.github.io/Aalegre-Web/index.html" class="list-group-item list-group-item-action">
+                        <i class="bi bi-house-fill pe-4 me-4 border-end"></i>Return
+                    </a>
+                </div>
+            </div>
         </div>
     </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-  </body>
+
+    <script>
+        $(document).ready(function () {
+            $(".nav-item > a").each(function (index) {
+                $(this).on("click", function () {
+                    ChangeContainer($(this).attr('id'));
+                });
+            });
+        });
+        function ChangeContainer(container) {
+            $("main").removeClass("container container-sm container-md container-lg container-xl container-xxl container-fluid").addClass(container);
+            $(".nav-item > a").removeClass("active");
+            $("#" + container).addClass("active");
+        }
+    </script>
+
+</body>
 </html>
