@@ -4,29 +4,40 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-2T46VT755D"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-      gtag('config', 'G-2T46VT755D');
+        gtag('config', 'G-2T46VT755D');
     </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Aalegre - Resources - DAW M09 UF3 - Bootstrap - Grids</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
 </head>
-<body class="text-center">
+<body class="text-center container-fluid">
+    <style>
+        .column {
+            cursor: move;
+        }
+
+        .dragging {
+            z-index: 10;
+            box-shadow: 0 1rem 3rem rgba(0,0,0,.5) !important;
+        }
+    </style>
     <div class="row rounded border border-secondary bg-body-tertiary mb-3">
         <div class="font-monospace">
             .row
         </div>
         <div class="col rounded border border-dark bg-body-secondary column">
-            <a class="btn btn-sm btn-outline-danger py-0 px-1 m-1 float-start" onclick="DeleteElement(this);"><i class="bi bi-trash3-fill"></i></a>
-            <a class="btn btn-sm btn-outline-success py-0 px-1 m-1 float-start" onclick="CloneElement(this);"><i class="bi bi-plus"></i></a>
-            <p class="font-monospace" style="margin-right:63px;">
-                .col
-            </p>
+            <div class="input-group py-1 font-monospace">
+                <a class="btn btn-sm btn-outline-danger" onclick="DeleteElement(this);"><i class="bi bi-trash3-fill"></i></a>
+                <a class="btn btn-sm btn-outline-success" onclick="CloneElement(this);"><i class="bi bi-plus"></i></a>
+                <input class="form-control form-control-sm" type="text" placeholder="col" value="col" onchange="ChangeClass(this);">
+            </div>
             <p class="text-start">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan quam nisi, a malesuada massa ornare id. Sed mollis quam et mi feugiat, a semper sapien luctus.
             </p>
@@ -37,11 +48,11 @@
             .row
         </div>
         <div class="col-sm rounded border border-dark bg-body-secondary column">
-            <a class="btn btn-sm btn-outline-danger py-0 px-1 m-1 float-start" onclick="DeleteElement(this);"><i class="bi bi-trash3-fill"></i></a>
-            <a class="btn btn-sm btn-outline-success py-0 px-1 m-1 float-start" onclick="CloneElement(this);"><i class="bi bi-plus"></i></a>
-            <p class="font-monospace" style="margin-right:63px;">
-                .col-sm
-            </p>
+            <div class="input-group py-1 font-monospace">
+                <a class="btn btn-sm btn-outline-danger" onclick="DeleteElement(this);"><i class="bi bi-trash3-fill"></i></a>
+                <a class="btn btn-sm btn-outline-success" onclick="CloneElement(this);"><i class="bi bi-plus"></i></a>
+                <input class="form-control form-control-sm" type="text" placeholder="col" value="col-sm" onchange="ChangeClass(this);">
+            </div>
             <p class="text-start">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan quam nisi, a malesuada massa ornare id. Sed mollis quam et mi feugiat, a semper sapien luctus.
             </p>
@@ -52,11 +63,11 @@
             .row
         </div>
         <div class="col-md rounded border border-dark bg-body-secondary column">
-            <a class="btn btn-sm btn-outline-danger py-0 px-1 m-1 float-start" onclick="DeleteElement(this);"><i class="bi bi-trash3-fill"></i></a>
-            <a class="btn btn-sm btn-outline-success py-0 px-1 m-1 float-start" onclick="CloneElement(this);"><i class="bi bi-plus"></i></a>
-            <p class="font-monospace" style="margin-right:63px;">
-                .col-md
-            </p>
+            <div class="input-group py-1 font-monospace">
+                <a class="btn btn-sm btn-outline-danger" onclick="DeleteElement(this);"><i class="bi bi-trash3-fill"></i></a>
+                <a class="btn btn-sm btn-outline-success" onclick="CloneElement(this);"><i class="bi bi-plus"></i></a>
+                <input class="form-control form-control-sm" type="text" placeholder="col" value="col-md" onchange="ChangeClass(this);">
+            </div>
             <p class="text-start">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan quam nisi, a malesuada massa ornare id. Sed mollis quam et mi feugiat, a semper sapien luctus.
             </p>
@@ -67,11 +78,11 @@
             .row
         </div>
         <div class="col-lg rounded border border-dark bg-body-secondary column">
-            <a class="btn btn-sm btn-outline-danger py-0 px-1 m-1 float-start" onclick="DeleteElement(this);"><i class="bi bi-trash3-fill"></i></a>
-            <a class="btn btn-sm btn-outline-success py-0 px-1 m-1 float-start" onclick="CloneElement(this);"><i class="bi bi-plus"></i></a>
-            <p class="font-monospace" style="margin-right:63px;">
-                .col-lg
-            </p>
+            <div class="input-group py-1 font-monospace">
+                <a class="btn btn-sm btn-outline-danger" onclick="DeleteElement(this);"><i class="bi bi-trash3-fill"></i></a>
+                <a class="btn btn-sm btn-outline-success" onclick="CloneElement(this);"><i class="bi bi-plus"></i></a>
+                <input class="form-control form-control-sm" type="text" placeholder="col" value="col-lg" onchange="ChangeClass(this);">
+            </div>
             <p class="text-start">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan quam nisi, a malesuada massa ornare id. Sed mollis quam et mi feugiat, a semper sapien luctus.
             </p>
@@ -82,11 +93,11 @@
             .row
         </div>
         <div class="col-xl rounded border border-dark bg-body-secondary column">
-            <a class="btn btn-sm btn-outline-danger py-0 px-1 m-1 float-start" onclick="DeleteElement(this);"><i class="bi bi-trash3-fill"></i></a>
-            <a class="btn btn-sm btn-outline-success py-0 px-1 m-1 float-start" onclick="CloneElement(this);"><i class="bi bi-plus"></i></a>
-            <p class="font-monospace" style="margin-right:63px;">
-                .col-xl
-            </p>
+            <div class="input-group py-1 font-monospace">
+                <a class="btn btn-sm btn-outline-danger" onclick="DeleteElement(this);"><i class="bi bi-trash3-fill"></i></a>
+                <a class="btn btn-sm btn-outline-success" onclick="CloneElement(this);"><i class="bi bi-plus"></i></a>
+                <input class="form-control form-control-sm" type="text" placeholder="col" value="col-xl" onchange="ChangeClass(this);">
+            </div>
             <p class="text-start">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan quam nisi, a malesuada massa ornare id. Sed mollis quam et mi feugiat, a semper sapien luctus.
             </p>
@@ -97,11 +108,11 @@
             .row
         </div>
         <div class="col-xxl rounded border border-dark bg-body-secondary column">
-            <a class="btn btn-sm btn-outline-danger py-0 px-1 m-1 float-start" onclick="DeleteElement(this);"><i class="bi bi-trash3-fill"></i></a>
-            <a class="btn btn-sm btn-outline-success py-0 px-1 m-1 float-start" onclick="CloneElement(this);"><i class="bi bi-plus"></i></a>
-            <p class="font-monospace" style="margin-right:63px;">
-                .col-xxl
-            </p>
+            <div class="input-group py-1 font-monospace">
+                <a class="btn btn-sm btn-outline-danger" onclick="DeleteElement(this);"><i class="bi bi-trash3-fill"></i></a>
+                <a class="btn btn-sm btn-outline-success" onclick="CloneElement(this);"><i class="bi bi-plus"></i></a>
+                <input class="form-control form-control-sm" type="text" placeholder="col" value="col-xxl" onchange="ChangeClass(this);">
+            </div>
             <p class="text-start">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan quam nisi, a malesuada massa ornare id. Sed mollis quam et mi feugiat, a semper sapien luctus.
             </p>
@@ -137,30 +148,149 @@
             </p>
         </div>
     </div>
+    <div class="row rounded border border-secondary bg-body-tertiary mb-3">
+        <div class="font-monospace">
+            .row
+        </div>
+        <div class="col-3 rounded border border-dark bg-body-secondary column">
+            <a class="btn btn-sm btn-outline-danger py-0 px-1 m-1 float-start" onclick="DeleteElement(this);"><i class="bi bi-trash3-fill"></i></a>
+            <a class="btn btn-sm btn-outline-success py-0 px-1 m-1 float-start" onclick="CloneElement(this);"><i class="bi bi-plus"></i></a>
+            <p class="font-monospace" style="margin-right:63px;">
+                .col-3
+            </p>
+            <p class="text-start">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan quam nisi, a malesuada massa ornare id. Sed mollis quam et mi feugiat, a semper sapien luctus.
+            </p>
+        </div>
+    </div>
+    <div class="row rounded border border-secondary bg-body-tertiary mb-3">
+        <div class="font-monospace">
+            .row
+        </div>
+        <div class="col-4 rounded border border-dark bg-body-secondary column">
+            <a class="btn btn-sm btn-outline-danger py-0 px-1 m-1 float-start" onclick="DeleteElement(this);"><i class="bi bi-trash3-fill"></i></a>
+            <a class="btn btn-sm btn-outline-success py-0 px-1 m-1 float-start" onclick="CloneElement(this);"><i class="bi bi-plus"></i></a>
+            <p class="font-monospace" style="margin-right:63px;">
+                .col-4
+            </p>
+            <p class="text-start">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan quam nisi, a malesuada massa ornare id. Sed mollis quam et mi feugiat, a semper sapien luctus.
+            </p>
+        </div>
+    </div>
+    <div class="row rounded border border-secondary bg-body-tertiary mb-3">
+        <div class="font-monospace">
+            .row
+        </div>
+        <div class="col-5 rounded border border-dark bg-body-secondary column">
+            <a class="btn btn-sm btn-outline-danger py-0 px-1 m-1 float-start" onclick="DeleteElement(this);"><i class="bi bi-trash3-fill"></i></a>
+            <a class="btn btn-sm btn-outline-success py-0 px-1 m-1 float-start" onclick="CloneElement(this);"><i class="bi bi-plus"></i></a>
+            <p class="font-monospace" style="margin-right:63px;">
+                .col-5
+            </p>
+            <p class="text-start">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan quam nisi, a malesuada massa ornare id. Sed mollis quam et mi feugiat, a semper sapien luctus.
+            </p>
+        </div>
+    </div>
+    <div class="row rounded border border-secondary bg-body-tertiary mb-3">
+        <div class="font-monospace">
+            .row
+        </div>
+        <div class="col-6 rounded border border-dark bg-body-secondary column">
+            <a class="btn btn-sm btn-outline-danger py-0 px-1 m-1 float-start" onclick="DeleteElement(this);"><i class="bi bi-trash3-fill"></i></a>
+            <a class="btn btn-sm btn-outline-success py-0 px-1 m-1 float-start" onclick="CloneElement(this);"><i class="bi bi-plus"></i></a>
+            <p class="font-monospace" style="margin-right:63px;">
+                .col-7
+            </p>
+            <p class="text-start">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan quam nisi, a malesuada massa ornare id. Sed mollis quam et mi feugiat, a semper sapien luctus.
+            </p>
+        </div>
+    </div>
+    <div class="row rounded border border-secondary bg-body-tertiary mb-3">
+        <div class="font-monospace">
+            .row
+        </div>
+        <div class="col-md-1 rounded border border-dark bg-body-secondary column">
+            <a class="btn btn-sm btn-outline-danger py-0 px-1 m-1 float-start" onclick="DeleteElement(this);"><i class="bi bi-trash3-fill"></i></a>
+            <a class="btn btn-sm btn-outline-success py-0 px-1 m-1 float-start" onclick="CloneElement(this);"><i class="bi bi-plus"></i></a>
+            <p class="font-monospace" style="margin-right:63px;">
+                .col-md-1
+            </p>
+            <p class="text-start">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan quam nisi, a malesuada massa ornare id. Sed mollis quam et mi feugiat, a semper sapien luctus.
+            </p>
+        </div>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
     <script>
+        const classes = [
+            "col", "col-sm", "col-md", "col-lg", "col-xl", "col-xxl",
+            "col-1", "col-2", "col-3", "col-4", "col-5", "col-6", "col-7", "col-8", "col-9", "col-10", "col-11", "col-12", "col-13", "col-14",
+            "col-sm-1", "col-sm-2", "col-sm-3", "col-sm-4", "col-sm-5", "col-sm-6", "col-sm-7", "col-sm-8", "col-sm-9", "col-sm-10", "col-sm-11", "col-sm-12", "col-sm-13", "col-sm-14",
+            "col-md-1", "col-md-2", "col-md-3", "col-md-4", "col-md-5", "col-md-6", "col-md-7", "col-md-8", "col-md-9", "col-md-10", "col-md-11", "col-md-12", "col-md-13", "col-md-14",
+            "col-lg-1", "col-lg-2", "col-lg-3", "col-lg-4", "col-lg-5", "col-lg-6", "col-lg-7", "col-lg-8", "col-lg-9", "col-lg-10", "col-lg-11", "col-lg-12", "col-lg-13", "col-lg-14",
+            "col-xl-1", "col-xl-2", "col-xl-3", "col-xl-4", "col-xl-5", "col-xl-6", "col-xl-7", "col-xl-8", "col-xl-9", "col-xl-10", "col-xl-11", "col-xl-12", "col-xl-13", "col-xl-14",
+            "col-xxl-1", "col-xxl-2", "col-xxl-3", "col-xxl-4", "col-xxl-5", "col-xxl-6", "col-xxl-7", "col-xxl-8", "col-xxl-9", "col-xxl-10", "col-xxl-11", "col-xxl-12", "col-xxl-13", "col-xxl-14"
+        ];
         $(document).ready(function () {
 
-              var time = 0;
+            var time = 0;
 
-            $(".btn-outline-success").each(function() {
+            $(".btn-outline-success").each(function () {
                 var button = this;
-                setTimeout( function(){ 
+                setTimeout(function () {
                     setTimeout(function () { $(button).click(); }, 100);
-                    setTimeout(function () { $(button).click(); }, 600);
                 }, time)
-                time += 800;
+                time += 200;
+            });
+            $('.column').find("input").autocomplete({
+                source: classes,
+                minLength: 1
+            });
+            $(".column").draggable({
+                zIndex: 100,
+                drag: function (event, ui) {
+                    $(this).addClass("dragging");
+                }
+            });
+            $(".row").droppable({
+                accept: ".column",
+                drop: function (event, ui) {
+                    var droppable = $(this);
+                    var draggable = ui.draggable;
+                    // Move draggable into droppable
+                    draggable.appendTo(droppable);
+                    $(draggable).removeClass("dragging");
+                    $(draggable).css("top", "");
+                    $(draggable).css("left", "");
+                }
             });
         });
         function DeleteElement(element) {
             $(element).parents(".column").hide(200, function () {
-                $(element).remove();
+                $(this).remove();
             });
         }
         function CloneElement(element) {
-            $(element).parents(".column").clone().hide().appendTo($(element).parents(".row")).show(500);
+            $(element).parents(".column").clone().hide().appendTo($(element).parents(".row")).show(500).draggable({
+                zIndex: 100,
+                drag: function (event, ui) {
+                    $(this).addClass("dragging");
+                }
+            }).find("input").autocomplete({
+                source: classes,
+                minLength: 1
+            });
+        }
+        function ChangeClass(element) {
+            var col = $(element).parents(".column");
+            $(col).removeClass(classes.join(' '));
+            $(col).addClass($(element).val().replace(".", ""));
         }
     </script>
 
