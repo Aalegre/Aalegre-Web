@@ -4,150 +4,161 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-2T46VT755D"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-      gtag('config', 'G-2T46VT755D');
+        gtag('config', 'G-2T46VT755D');
     </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Aalegre - Resources - DAW M09 UF3 - Simulation</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 </head>
-  <body>
+<body>
+    <div class="dropup position-absolute bottom-0 end-0 rounded-circle m-3">
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <a class="btn btn-secondary" href="https://aalegre.github.io/Aalegre-Web/">
+                <i class="bi bi-arrow-90deg-left"></i>
+            </a>
+            <a class="btn btn-primary" href="https://www.alberto-alegre.com/">
+                <i class="bi bi-house-door-fill"></i>
+            </a>
+        </div>
+    </div>
     <main>
-      <div class="container-lg small">
-          <table class="table text-center align-middle">
-              <thead>
-                  <tr>
-                      <th rowspan="2"></th>
-                      <th colspan="5" scope="col">Lighthouse: 50=0 - 90=10</th>
-                      <th rowspan="2" scope="col">Teacher</th>
-                  </tr>
-                  <tr>
-                      <th>Performance</th>
-                      <th>Accesibility</th>
-                      <th>Best practices</th>
-                      <th>SEO</th>
-                      <th style="width:105px;">PWA</th>
-                  </tr>
-              </thead>
-              <tbody>
-                  <tr>
-                      <th class="text-end" scope="row">
-                          Desktop
-                      </th>
-                      <td>
-                          <div class="input-group">
-                              <label for="Desktop_Performance" class="input-group-text">5%</label>
-                              <input type="number" min="0" max="100" class="form-control pe-0" id="Desktop_Performance" value="70" onchange="Calculate_Score();">
-                          </div>
-                      </td>
-                      <td>
-                          <div class="input-group">
-                              <label for="Desktop_Accesibility" class="input-group-text">15%</label>
-                              <input type="number" min="0" max="100" class="form-control pe-0" id="Desktop_Accesibility" value="70" onchange="Calculate_Score();">
-                          </div>
-                      </td>
-                      <td>
-                          <div class="input-group">
-                              <label for="Desktop_Practices" class="input-group-text">5%</label>
-                              <input type="number" min="0" max="100" class="form-control pe-0" id="Desktop_Practices" value="70" onchange="Calculate_Score();">
-                          </div>
-                      </td>
-                      <td>
-                          <div class="input-group">
-                              <label for="Desktop_SEO" class="input-group-text">10%</label>
-                              <input type="number" min="0" max="100" class="form-control pe-0" id="Desktop_SEO" value="70" onchange="Calculate_Score();">
-                          </div>
-                      </td>
-                      <td rowspan="2" class="border-end">
-                          <div class="input-group mx-auto">
-                              <label for="PWA" class="input-group-text">+2</label>
-                              <div class="input-group-text">
-                                  <input class="form-check-input mt-0" type="checkbox" value="" id="PWA" onchange="Calculate_Score();">
-                              </div>
-                          </div>
-                      </td>
-                      <td rowspan="2">
-                          <div class="input-group">
-                              <label for="Teacher" class="input-group-text">30%</label>
-                              <input type="number" min="0" max="11" class="form-control pe-0" id="Teacher" value="5" onchange="Calculate_Score();">
-                          </div>
-                      </td>
-                  </tr>
-                  <tr>
-                      <th class="text-end" scope="row">
-                          Mobile
-                      </th>
-                      <td>
-                          <div class="input-group">
-                              <label for="Mobile_Performance" class="input-group-text">5%</label>
-                              <input type="number" min="0" max="100" class="form-control pe-0" id="Mobile_Performance" value="70" onchange="Calculate_Score();">
-                          </div>
-                      </td>
-                      <td>
-                          <div class="input-group">
-                              <label for="Mobile_Accesibility" class="input-group-text">15%</label>
-                              <input type="number" min="0" max="100" class="form-control pe-0" id="Mobile_Accesibility" value="70" onchange="Calculate_Score();">
-                          </div>
-                      </td>
-                      <td>
-                          <div class="input-group">
-                              <label for="Mobile_Practices" class="input-group-text">5%</label>
-                              <input type="number" min="0" max="100" class="form-control pe-0" id="Mobile_Practices" value="70" onchange="Calculate_Score();">
-                          </div>
-                      </td>
-                      <td>
-                          <div class="input-group">
-                              <label for="Mobile_SEO" class="input-group-text">10%</label>
-                              <input type="number" min="0" max="100" class="form-control pe-0" id="Mobile_SEO" value="70" onchange="Calculate_Score();">
-                          </div>
-                      </td>
-                  </tr>
-              </tbody>
-          </table>
-          <h1 class="text-center">
-              Final score: <b id="Final">0.00</b>
-          </h1>
-      </div>
+        <div class="container-lg small">
+            <table class="table text-center align-middle">
+                <thead>
+                    <tr>
+                        <th rowspan="2"></th>
+                        <th colspan="5" scope="col">Lighthouse: 50=0 - 90=10</th>
+                        <th rowspan="2" scope="col">Teacher</th>
+                    </tr>
+                    <tr>
+                        <th>Performance</th>
+                        <th>Accesibility</th>
+                        <th>Best practices</th>
+                        <th>SEO</th>
+                        <th style="width:105px;">PWA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th class="text-end" scope="row">
+                            Desktop
+                        </th>
+                        <td>
+                            <div class="input-group">
+                                <label for="Desktop_Performance" class="input-group-text">5%</label>
+                                <input type="number" min="0" max="100" class="form-control pe-0" id="Desktop_Performance" value="70" onchange="Calculate_Score();">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="input-group">
+                                <label for="Desktop_Accesibility" class="input-group-text">15%</label>
+                                <input type="number" min="0" max="100" class="form-control pe-0" id="Desktop_Accesibility" value="70" onchange="Calculate_Score();">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="input-group">
+                                <label for="Desktop_Practices" class="input-group-text">5%</label>
+                                <input type="number" min="0" max="100" class="form-control pe-0" id="Desktop_Practices" value="70" onchange="Calculate_Score();">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="input-group">
+                                <label for="Desktop_SEO" class="input-group-text">10%</label>
+                                <input type="number" min="0" max="100" class="form-control pe-0" id="Desktop_SEO" value="70" onchange="Calculate_Score();">
+                            </div>
+                        </td>
+                        <td rowspan="2" class="border-end">
+                            <div class="input-group mx-auto">
+                                <label for="PWA" class="input-group-text">+2</label>
+                                <div class="input-group-text">
+                                    <input class="form-check-input mt-0" type="checkbox" value="" id="PWA" onchange="Calculate_Score();">
+                                </div>
+                            </div>
+                        </td>
+                        <td rowspan="2">
+                            <div class="input-group">
+                                <label for="Teacher" class="input-group-text">30%</label>
+                                <input type="number" min="0" max="11" class="form-control pe-0" id="Teacher" value="5" onchange="Calculate_Score();">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="text-end" scope="row">
+                            Mobile
+                        </th>
+                        <td>
+                            <div class="input-group">
+                                <label for="Mobile_Performance" class="input-group-text">5%</label>
+                                <input type="number" min="0" max="100" class="form-control pe-0" id="Mobile_Performance" value="70" onchange="Calculate_Score();">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="input-group">
+                                <label for="Mobile_Accesibility" class="input-group-text">15%</label>
+                                <input type="number" min="0" max="100" class="form-control pe-0" id="Mobile_Accesibility" value="70" onchange="Calculate_Score();">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="input-group">
+                                <label for="Mobile_Practices" class="input-group-text">5%</label>
+                                <input type="number" min="0" max="100" class="form-control pe-0" id="Mobile_Practices" value="70" onchange="Calculate_Score();">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="input-group">
+                                <label for="Mobile_SEO" class="input-group-text">10%</label>
+                                <input type="number" min="0" max="100" class="form-control pe-0" id="Mobile_SEO" value="70" onchange="Calculate_Score();">
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h1 class="text-center">
+                Final score: <b id="Final">0.00</b>
+            </h1>
+        </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-      <script>
-          function Calculate_Score() {
-              var Desktop_Performance = Clamp(Remap(parseFloat($("#Desktop_Performance").val()), 50, 90, 0, 10), 0, 12.5) * 0.05;
-              var Desktop_Accesibility = Clamp(Remap(parseFloat($("#Desktop_Accesibility").val()), 50, 90, 0, 10), 0, 12.5) * 0.15;
-              var Desktop_Practices = Clamp(Remap(parseFloat($("#Desktop_Practices").val()), 50, 90, 0, 10), 0, 12.5) * 0.05;
-              var Desktop_SEO = Clamp(Remap(parseFloat($("#Desktop_SEO").val()), 50, 90, 0, 10), 0, 12.5) * 0.1;
-              var Mobile_Performance = Clamp(Remap(parseFloat($("#Mobile_Performance").val()), 50, 90, 0, 10), 0, 12.5) * 0.05;
-              var Mobile_Accesibility = Clamp(Remap(parseFloat($("#Mobile_Accesibility").val()), 50, 90, 0, 10), 0, 12.5) * 0.15;
-              var Mobile_Practices = Clamp(Remap(parseFloat($("#Mobile_Practices").val()), 50, 90, 0, 10), 0, 12.5) * 0.05;
-              var Mobile_SEO = Clamp(Remap(parseFloat($("#Mobile_SEO").val()), 50, 90, 0, 10), 0, 12.5) * 0.1;
-              var Teacher = parseFloat($("#Teacher").val()) * 0.3;
-              var total = Desktop_Performance + Desktop_Accesibility + Desktop_Practices + Desktop_SEO + Mobile_Performance + Mobile_Accesibility + Mobile_Practices + Mobile_SEO + Teacher;
+    <script>
+        function Calculate_Score() {
+            var Desktop_Performance = Clamp(Remap(parseFloat($("#Desktop_Performance").val()), 50, 90, 0, 10), 0, 12.5) * 0.05;
+            var Desktop_Accesibility = Clamp(Remap(parseFloat($("#Desktop_Accesibility").val()), 50, 90, 0, 10), 0, 12.5) * 0.15;
+            var Desktop_Practices = Clamp(Remap(parseFloat($("#Desktop_Practices").val()), 50, 90, 0, 10), 0, 12.5) * 0.05;
+            var Desktop_SEO = Clamp(Remap(parseFloat($("#Desktop_SEO").val()), 50, 90, 0, 10), 0, 12.5) * 0.1;
+            var Mobile_Performance = Clamp(Remap(parseFloat($("#Mobile_Performance").val()), 50, 90, 0, 10), 0, 12.5) * 0.05;
+            var Mobile_Accesibility = Clamp(Remap(parseFloat($("#Mobile_Accesibility").val()), 50, 90, 0, 10), 0, 12.5) * 0.15;
+            var Mobile_Practices = Clamp(Remap(parseFloat($("#Mobile_Practices").val()), 50, 90, 0, 10), 0, 12.5) * 0.05;
+            var Mobile_SEO = Clamp(Remap(parseFloat($("#Mobile_SEO").val()), 50, 90, 0, 10), 0, 12.5) * 0.1;
+            var Teacher = parseFloat($("#Teacher").val()) * 0.3;
+            var total = Desktop_Performance + Desktop_Accesibility + Desktop_Practices + Desktop_SEO + Mobile_Performance + Mobile_Accesibility + Mobile_Practices + Mobile_SEO + Teacher;
 
-              if ($("#PWA").is(":checked")) {
-                  total += 2;
-              }
+            if ($("#PWA").is(":checked")) {
+                total += 2;
+            }
 
-              $("#Final").text(total.toFixed(2));
-          }
+            $("#Final").text(total.toFixed(2));
+        }
 
-          function Remap(In, InMin, InMax, OutMin, OutMax) {
-              return OutMin + (In - InMin) * (OutMax - OutMin) / (InMax - InMin);
-          }
-          function Clamp(In, Min, Max) {
-              if (In < Min)
-                  In = Min;
-              else if (In > Max)
-                  In = Max;
-              return In;
-          }
-          $(document).ready(function () {
-              Calculate_Score();
-          });
-      </script>
-  </body>
+        function Remap(In, InMin, InMax, OutMin, OutMax) {
+            return OutMin + (In - InMin) * (OutMax - OutMin) / (InMax - InMin);
+        }
+        function Clamp(In, Min, Max) {
+            if (In < Min)
+                In = Min;
+            else if (In > Max)
+                In = Max;
+            return In;
+        }
+        $(document).ready(function () {
+            Calculate_Score();
+        });
+    </script>
+</body>
 </html>
